@@ -90,7 +90,7 @@ void mdns_register(void) {
     {
         for (b = mdns_backends; *b; b++)
         {
-            warn("Test the mdns is %s\r\n"mdns_backends->name);
+            warn("Test the mdns is %s\r\n",(*b)->name);
             int error = (*b)->mdns_register(mdns_apname, config.port);
             if (error >= 0)
             {
