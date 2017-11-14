@@ -95,7 +95,7 @@ void mdns_register(void) {
             if (error >= 0)
             {
                 config.mdns = *b;
-				warn("The coreect mdns is %s\r\n",(*b)->name);
+				warn("The correct mdns is %s\r\n",(*b)->name);
                 break;
             }
         }
