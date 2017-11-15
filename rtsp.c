@@ -917,7 +917,7 @@ void rtsp_listen_loop(void) {
     }
 
 
-
+    printf("This is 1\r\n");
     mdns_register();
 
     printf("Listening for connections.\n");
