@@ -60,12 +60,19 @@ void mdns_register(void) {
     char *mdns_apname = malloc(strlen(config.apname) + 14);
     char *p = mdns_apname;
     int i;
+
+	printf("print out the mac buf:");
     for (i=0; i<6; i++) {
         sprintf(p, "%02X", config.hw_addr[i]);
         p += 2;
+	    printf("0x%x,", config.hw_addr[i]);
     }
     *p++ = '@';
     strcpy(p, config.apname);
+    printf("\r\n");
+
+	printf("print out mac str: %s",p);
+    
 
     mdns_backend **b = NULL;
     
