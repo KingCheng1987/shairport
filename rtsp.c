@@ -863,6 +863,8 @@ void rtsp_listen_loop(void) {
 
     snprintf(portstr, 6, "%d", config.port);
 
+
+#if 0
     ret = getaddrinfo(NULL, portstr, &hints, &info);
     if (ret) {
         die("getaddrinfo failed: %s", gai_strerror(ret));
@@ -903,6 +905,7 @@ void rtsp_listen_loop(void) {
 
     if (!nsock)
         die("could not bind any listen sockets!");
+#endif
 
 
     int maxfd = -1;
@@ -912,6 +915,8 @@ void rtsp_listen_loop(void) {
         if (sockfd[i] > maxfd)
             maxfd = sockfd[i];
     }
+
+
 
     mdns_register();
 
