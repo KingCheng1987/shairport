@@ -916,6 +916,11 @@ void rtsp_listen_loop(void) {
     mdns_register();
 
     printf("Listening for connections.\n");
+
+	while(1)
+	{
+        
+	}
     shairport_startup_complete();
 
     int acceptfd;
