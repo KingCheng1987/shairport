@@ -45,13 +45,13 @@ extern mdns_backend mdns_dns_sd;
 
 static mdns_backend *mdns_backends[] = {
 #ifdef CONFIG_AVAHI
-    &mdns_avahi,
+  //  &mdns_avahi,
 #endif
 #ifdef CONFIG_HAVE_DNS_SD_H
-    &mdns_dns_sd,
+ //   &mdns_dns_sd,
 #endif
-    &mdns_external_avahi,
-    &mdns_external_dns_sd,
+//    &mdns_external_avahi,
+//    &mdns_external_dns_sd,
     &mdns_tinysvcmdns,
     NULL
 };
