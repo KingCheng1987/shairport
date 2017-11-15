@@ -285,7 +285,6 @@ int main(int argc, char **argv) {
     config.apname = malloc(20 + 100);
     snprintf(config.apname, 20 + 100, "Shairport on %s", hostname);
 
-	/*
 
     // parse arguments into config
     int audio_arg = parse_options(argc, argv);
@@ -316,7 +315,7 @@ int main(int argc, char **argv) {
 
     if (config.meta_dir)
         metadata_open();
-     */
+  
 
     rtsp_listen_loop();
 
