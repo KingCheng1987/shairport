@@ -917,10 +917,6 @@ void rtsp_listen_loop(void) {
 
     printf("Listening for connections.\n");
 
-	while(1)
-	{
-        
-	}
     shairport_startup_complete();
 
     int acceptfd;
