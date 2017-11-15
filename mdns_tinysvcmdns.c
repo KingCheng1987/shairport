@@ -124,6 +124,8 @@ static int mdns_tinysvcmdns_register(char *apname, int port) {
     freeifaddrs(ifa);
 
     const char *txt[] = { MDNS_RECORD, NULL };
+
+	printf("TinyMDNS appname is %s\r\n",apname);
     struct mdns_service *svc = mdnsd_register_svc(svr,
                                 apname,
                                 "_raop._tcp.local",
